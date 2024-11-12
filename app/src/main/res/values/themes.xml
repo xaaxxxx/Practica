@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.UmnuiDomikYoYoYo" parent="Base.Theme.UmnuiDomikYoYoYo" />
+
+    <style name="BrightnessProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/brightness_progress_drawable</item>
+        <item name="android:indeterminateDrawable">@drawable/brightness_progress_drawable</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxHeight">10dp</item>
+    </style>
 </resources>

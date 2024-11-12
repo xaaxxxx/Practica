@@ -6,56 +6,63 @@
 
 
     <LinearLayout
-        android:layout_width="305dp"
-        android:layout_height="185dp"
-        android:background="@drawable/bordermodern"
-        android:backgroundTint="@color/white"
+        android:layout_width="187dp"
+        android:layout_height="129dp"
+        android:background="@drawable/bluecirclebutton"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/n1n1"
-            android:layout_width="412dp"
-            android:layout_height="148dp"
+        <LinearLayout
+            android:layout_width="187dp"
+            android:layout_height="60dp">
 
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/vent">
+
+            </ImageView>
+
+            <Switch
+                android:id="@+id/n1n1"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="30dp"
+
+
+                android:textColor="@color/darkblue"></Switch>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="324dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="30dp"
-            android:text="ПЦР тест для определения"
-            android:textColor="@color/black"
+            android:text="Лампа"
+            android:textColor="@color/darkblue"
             android:textSize="20dp"></TextView>
 
         <TextView
-            android:id="@+id/n1n2"
-            android:layout_width="437dp"
+            android:layout_width="324dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="-35dp"
+            android:layout_marginBottom="30dp"
+            android:text="70% скорость"
+            android:textColor="@color/gradi"
+            android:textSize="13dp"></TextView>
 
-            android:layout_height="93dp"
-            android:layout_marginTop="-130dp"
-            android:text="2 дня"
-            android:textColor="@color/black"
-            android:textSize="15dp"></TextView>
-
-        <TextView
-            android:id="@+id/n1n3"
-            android:layout_width="134dp"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="-30dp"
-            android:text="15$"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold"></TextView>
 
     </LinearLayout>
 
-    <Button
-android:id="@+id/butd1"
-        android:layout_width="117dp"
-        android:layout_height="59dp"
-        android:layout_marginLeft="-165dp"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/bordermodern"
-        android:backgroundTint="@color/gradi"
-        android:text="Добавить"
-        android:textAllCaps="false"
-        android:textColor="@color/white"></Button>
+
+
+
 
 
 </LinearLayout>

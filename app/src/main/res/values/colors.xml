@@ -5,4 +5,8 @@
     <color name="red">#FB0505</color>
     <color name="blue">#00D9FF</color>
     <color name="darkblue">#0022FF</color>
+    <color name="gradi">#83A0F8</color>
+    <color name="gray">#f5f5f9</color>
+    <color name="darker_gray">#E6E6E6</color>
+    <color name="serui">#808080</color>
 </resources>

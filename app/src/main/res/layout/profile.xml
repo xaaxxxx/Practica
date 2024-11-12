@@ -7,142 +7,134 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="242dp"
         android:background="#000000"
-        android:padding="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Твой дом"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
             android:gravity="center_vertical"
-            android:layout_marginTop="8dp">
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="66dp"
+                android:layout_height="60dp"
+
+
+                android:src="@drawable/leftstrel" />
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="г. Омск, ул. Ленина, д. 24"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:paddingLeft="70dp"
+                android:text="Профиль"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/gear_icon"
-                android:layout_marginStart="16dp"/>
 
         </LinearLayout>
+
+        <ImageView
+            android:layout_width="166dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="0dp"
+
+            android:src="@drawable/faceprof" />
+
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000"
+        android:layout_marginTop="16dp"
+
         android:orientation="vertical"
         android:padding="16dp">
 
         <TextView
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Меню"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="16dp"
+            android:text="Имя пользователя"
+           />
 
-        <LinearLayout
+        <EditText
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:hint="Имя пользователя"
+            android:inputType="text" />
+
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:orientation="horizontal">
+            android:text="Эл. почта" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/button_background"
-                android:padding="10dp"
-                android:text="Комнаты"
-                android:textSize="14sp" />
+        <EditText
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите электронную почту"
+            android:inputType="textEmailAddress" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:background="@color/button_background"
-                android:padding="10dp"
-                android:text="Устройства"
-                android:textSize="14sp" />
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Пароль" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:background="@color/button_background"
-                android:padding="10dp"
-                android:text="Пользователи"
-                android:textSize="14sp" />
-
-        </LinearLayout>
+        <EditText
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите пароль"
+            android:inputType="textPassword" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="16dp">
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="62dp"
+        android:background="@drawable/bluecircle"
+        android:backgroundTint="@color/gradi"
+        android:text="Сохранить"
+        android:textColor="@color/white" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="98dp"
-            android:background="@color/button_background"
-            android:drawableLeft="@drawable/sofa"
-            android:drawablePadding="10dp"
-            android:padding="12dp"
-            android:text="Гостинная"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_marginLeft="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bluecircle"
+        android:backgroundTint="@color/red"
+        android:text="Удалить"
+        android:textColor="@color/white" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="123dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/button_background"
-            android:drawableLeft="@drawable/fridge"
-            android:drawablePadding="10dp"
-            android:padding="12dp"
-            android:text="Кухня"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/button_background"
-            android:drawableLeft="@drawable/shower"
-            android:drawablePadding="10dp"
-            android:padding="12dp"
-            android:text="Ванная"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
 
-    </LinearLayout>
+
 
 </LinearLayout>

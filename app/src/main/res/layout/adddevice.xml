@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="242dp"
+        android:layout_height="102dp"
         android:background="#000000"
         android:orientation="vertical"
         android:padding="16dp">
@@ -32,22 +32,14 @@
                 android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_weight="1"
-                android:paddingLeft="70dp"
-                android:text="Профиль"
+                android:paddingLeft="30dp"
+                android:text="Добавить устройство"
                 android:textColor="#FFFFFF"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
 
         </LinearLayout>
-
-        <ImageView
-            android:layout_width="166dp"
-            android:layout_height="160dp"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="0dp"
-
-            android:src="@drawable/faceprof" />
 
 
     </LinearLayout>
@@ -60,56 +52,50 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Имя пользователя"
-           />
 
         <EditText
-            android:textStyle="bold"
-            android:textColor="@color/black"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="43dp"
+            android:background="@drawable/bluecirclebutton"
 
             android:hint="Имя пользователя"
-            android:inputType="text" />
-
-
-        <TextView
-            android:textStyle="bold"
+            android:inputType="text"
             android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Эл. почта" />
+            android:textStyle="bold" />
 
         <EditText
+            android:layout_marginTop="10dp"
+            android:layout_height="43dp"
+            android:background="@drawable/bluecirclebutton"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+
             android:hint="Введите электронную почту"
             android:inputType="textEmailAddress" />
 
-        <TextView
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Пароль" />
 
-        <EditText
+
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:layout_height="43dp"
+            android:background="@drawable/bluecirclebutton"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Введите пароль"
+            android:text="Введите пароль"
             android:inputType="textPassword" />
+
+        <TextView
+           android:layout_marginTop="5dp"
+            android:layout_width="200dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:text="Выбрать устройство"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -123,15 +109,7 @@
         android:text="Сохранить"
         android:textColor="@color/white" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="300dp"
-        android:layout_marginLeft="50dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bluecircle"
-        android:backgroundTint="@color/red"
-        android:text="Удалить"
-        android:textColor="@color/white" />
+
 
 
 

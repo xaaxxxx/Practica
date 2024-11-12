@@ -2,10 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/street"
+    android:backgroundTint="#C40AC6FF"
+    android:backgroundTintMode="multiply"
     android:gravity="center_horizontal"
-    android:padding="16dp"
-    android:background="@drawable/backgroundtwo">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <ImageView
         android:layout_width="100dp"
@@ -14,30 +16,28 @@
         android:src="@drawable/iconhouse" />
 
     <TextView
-        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Умный дом"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
-
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#7258E6F8"
         android:orientation="vertical"
-        android:background="@color/blue"
         android:padding="16dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Имя пользователя"
             android:layout_marginTop="16dp"
-            />
+            android:text="Имя пользователя" />
 
         <EditText
             android:layout_width="match_parent"
@@ -50,9 +50,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Эл. почта"
             android:layout_marginTop="16dp"
-            />
+            android:text="Эл. почта" />
 
         <EditText
             android:layout_width="match_parent"
@@ -74,18 +73,21 @@
 
     </LinearLayout>
 
-    <Button
-        android:backgroundTint="@color/black"
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="300dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginTop="32dp"
-        android:text="Регистрация" />
-
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="16dp"
+        android:background="@drawable/bluecircle"
         android:backgroundTint="@color/red"
+        android:text="Регистрация"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bluecircle"
+        android:backgroundTint="@color/black"
         android:text="Войти"
         android:textColor="@color/white" />
 

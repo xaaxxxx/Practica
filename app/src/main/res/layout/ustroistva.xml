@@ -38,9 +38,9 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/gear_icon"
-                android:layout_marginStart="16dp"/>
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/whaleset" />
 
         </LinearLayout>
 
@@ -72,14 +72,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/button_background"
+                android:background="@color/"
                 android:padding="10dp"
                 android:text="Комнаты"
                 android:textSize="14sp" />
 
             <Button
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
                 android:background="@color/button_background"
@@ -101,48 +101,12 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="16dp">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="98dp"
-            android:background="@color/button_background"
-            android:drawableLeft="@drawable/sofa"
-            android:drawablePadding="10dp"
-            android:padding="12dp"
-            android:text="Гостинная"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+    <ImageButton
+        android:layout_marginLeft="330dp"
+        android:layout_width="76dp"
+        android:layout_height="61dp"
+        android:background="@drawable/buttonadd"></ImageButton>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="123dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/button_background"
-            android:drawableLeft="@drawable/fridge"
-            android:drawablePadding="10dp"
-            android:padding="12dp"
-            android:text="Кухня"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/button_background"
-            android:drawableLeft="@drawable/shower"
-            android:drawablePadding="10dp"
-            android:padding="12dp"
-            android:text="Ванная"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-    </LinearLayout>
 
 </LinearLayout>

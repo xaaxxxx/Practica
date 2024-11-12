@@ -2,11 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/street"
+    android:backgroundTint="#C40AC6FF"
+    android:backgroundTintMode="multiply"
     android:gravity="center_horizontal"
-    android:padding="16dp"
-    android:background="@drawable/backgroundtwo">
-
+    android:orientation="vertical"
+    android:padding="16dp">
 
 
     <ImageView
@@ -19,8 +20,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textColor="@color/white"
         android:text="Умный дом"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -28,10 +29,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="#7258E6F8"
         android:orientation="vertical"
-        android:background="@color/blue"
         android:padding="16dp">
-
 
 
         <TextView
@@ -44,7 +44,6 @@
             android:layout_height="wrap_content"
             android:hint="Введите электронную почту"
             android:inputType="textEmailAddress" />
-
 
 
         <TextView
@@ -62,19 +61,22 @@
 
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="300dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginTop="62dp"
+        android:background="@drawable/bluecircle"
         android:backgroundTint="@color/red"
         android:text="Войти"
         android:textColor="@color/white" />
 
-    <Button
-        android:backgroundTint="@color/black"
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="300dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
-        android:text="Регистрация" />
+        android:background="@drawable/bluecircle"
+        android:backgroundTint="@color/black"
+        android:text="Регистрация"
+        android:textColor="@color/white" />
 
 </LinearLayout>
