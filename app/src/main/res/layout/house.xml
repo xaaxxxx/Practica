@@ -37,10 +37,10 @@
                 android:layout_weight="1"/>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/gear_icon"
-                android:layout_marginStart="16dp"/>
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/whaleset" />
 
         </LinearLayout>
 
@@ -68,31 +68,31 @@
             android:layout_marginTop="16dp"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/button_background"
+                android:background="@color/black"
                 android:padding="10dp"
                 android:text="Комнаты"
                 android:textSize="14sp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:background="@color/button_background"
+                android:background="@color/black"
                 android:padding="10dp"
                 android:text="Устройства"
                 android:textSize="14sp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:background="@color/button_background"
+                android:background="@color/black"
                 android:padding="10dp"
                 android:text="Пользователи"
                 android:textSize="14sp" />

@@ -40,6 +40,7 @@
             android:text="Эл. почта" />
 
         <EditText
+            android:id="@+id/edit1page1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Введите электронную почту"
@@ -53,7 +54,7 @@
             android:text="Пароль" />
 
         <EditText
-
+            android:id="@+id/edit1page2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Введите пароль"
@@ -62,6 +63,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonvoiti"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="62dp"
@@ -71,6 +73,7 @@
         android:textColor="@color/white" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonregister1"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"

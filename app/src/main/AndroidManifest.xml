@@ -21,6 +21,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity android:name=".AdressActivity" ></activity>
+        <activity android:name=".HouseActivity" ></activity>
+        <activity android:name=".Pincodejoin" ></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".PincodeActivity"></activity>
+
+
+
+
     </application>
 
 </manifest>

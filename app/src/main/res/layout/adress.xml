@@ -31,6 +31,7 @@
         android:gravity="center" />
 
     <EditText
+        android:id="@+id/edit3page1"
         android:background="@drawable/bluecirclebutton"
 android:layout_marginLeft="30dp"
         android:layout_width="350dp"
@@ -43,6 +44,7 @@ android:layout_marginLeft="30dp"
     android:paddingLeft="16dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sohranbutton"
 android:textStyle="bold"
         android:textAllCaps="false"
         android:background="@drawable/bluecircle"
