@@ -22,7 +22,11 @@
             </intent-filter>
         </activity>
 
-
+        <activity android:name=".RoomAddActivity" ></activity>
+        <activity android:name=".DeviceAddActivity" ></activity>
+        <activity android:name=".ProfileAddActivity" ></activity>
+        <activity android:name=".DeviceActivity" ></activity>
+        <activity android:name=".FamilyActivity" ></activity>
         <activity android:name=".AdressActivity" ></activity>
         <activity android:name=".HouseActivity" ></activity>
         <activity android:name=".Pincodejoin" ></activity>

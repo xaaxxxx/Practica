@@ -4,32 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class HouseActivity : AppCompatActivity() {
-
-    private lateinit var textViewHouse: TextView
+class DeviceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.house)
-
-
-        val roomset = findViewById<ImageButton>(R.id.roomset)
+        setContentView(R.layout.ustroistva)
         val roomButton = findViewById<Button>(R.id.roomButton)
         val deviceButton = findViewById<Button>(R.id.deviceButton)
         val userButton = findViewById<Button>(R.id.userButton)
         val addbutton = findViewById<ImageButton>(R.id.addbutton)
-
-
-        textViewHouse = findViewById(R.id.texthouse)
-
-        val intent = intent
-        if (intent != null) {
-            val address = intent.getStringExtra("address")
-            textViewHouse.text = address
-        }
+        val deviceset = findViewById<ImageButton>(R.id.deviceset)
 
         roomButton.setOnClickListener {
             Toast.makeText(this, "Переход к комнатам", Toast.LENGTH_SHORT).show()
@@ -55,11 +41,11 @@ class HouseActivity : AppCompatActivity() {
 
         addbutton.setOnClickListener {
             // Переход к AddActivity
-            val intent = Intent(this, RoomAddActivity::class.java)
+            val intent = Intent(this, DeviceAddActivity::class.java)
             startActivity(intent)
         }
 
-        roomset.setOnClickListener {
+        deviceset.setOnClickListener {
             // Переход к AddActivity
             val intent = Intent(this, AdressActivity::class.java)
             startActivity(intent)

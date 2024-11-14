@@ -19,13 +19,11 @@
             android:layout_marginTop="0dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
-
-
-            <ImageView
+            
+            <ImageButton
+                android:id="@+id/leftbutton3"
                 android:layout_width="66dp"
                 android:layout_height="60dp"
-
-
                 android:src="@drawable/leftstrel" />
 
             <TextView
@@ -47,13 +45,20 @@
     </LinearLayout>
 
 
-    <ImageButton
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="50dp"
+        android:id="@+id/recyclerViewProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
+
+    <ImageButton
+        android:layout_marginTop="250dp"
+        android:id="@+id/addbutton"
         android:layout_marginLeft="330dp"
         android:layout_width="76dp"
         android:layout_height="61dp"
         android:background="@drawable/buttonadd"></ImageButton>
-
 
 
 

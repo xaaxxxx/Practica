@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Твой дом"
+            android:text="Устройства"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -29,6 +29,7 @@
             android:layout_marginTop="8dp">
 
             <TextView
+                android:id="@+id/textus"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="г. Омск, ул. Ленина, д. 24"
@@ -36,8 +37,9 @@
                 android:textSize="16sp"
                 android:layout_weight="1"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
+            <ImageButton
+                android:id="@+id/deviceset"
+                android:layout_width="85dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
                 android:src="@drawable/whaleset" />
@@ -50,63 +52,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#000000"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="horizontal"
+        android:padding="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/roomButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Меню"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:text="Комнаты"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:background="?android:attr/selectableItemBackground" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/deviceButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:text="Устройства"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:background="?android:attr/selectableItemBackground" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/black"
-                android:padding="10dp"
-                android:text="Комнаты"
-                android:textSize="14sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:background="@color/black"
-                android:padding="10dp"
-                android:text="Устройства"
-                android:textSize="14sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:background="@color/black"
-                android:padding="10dp"
-                android:text="Пользователи"
-                android:textSize="14sp" />
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/userButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Пользователи"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:background="?android:attr/selectableItemBackground" />
 
     </LinearLayout>
 
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="50dp"
+        android:id="@+id/recyclerViewProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
     <ImageButton
+        android:layout_marginTop="250dp"
+        android:id="@+id/addbutton"
         android:layout_marginLeft="330dp"
         android:layout_width="76dp"
         android:layout_height="61dp"
         android:background="@drawable/buttonadd"></ImageButton>
-
 
 </LinearLayout>
