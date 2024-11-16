@@ -16,6 +16,7 @@
             android:layout_height="60dp">
 
             <ImageView
+                android:id="@+id/picturedevice"
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="0dp"
@@ -25,7 +26,7 @@
             </ImageView>
 
             <Switch
-                android:id="@+id/n1n1"
+                android:id="@+id/isTurn"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_marginLeft="40dp"
@@ -38,6 +39,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/nameofdevice"
             android:layout_width="324dp"
             android:layout_height="28dp"
             android:layout_marginLeft="5dp"
@@ -48,6 +50,7 @@
             android:textSize="20dp"></TextView>
 
         <TextView
+            android:id="@+id/opisaniedevice"
             android:layout_width="324dp"
             android:layout_height="28dp"
             android:layout_marginLeft="5dp"

@@ -24,6 +24,7 @@
             </ImageView>
 
             <TextView
+                android:id="@+id/nazvanie"
                 android:layout_width="324dp"
                 android:layout_height="28dp"
                 android:layout_marginLeft="10dp"
@@ -49,6 +50,7 @@
 
 
         <TextView
+            android:id="@+id/opisanieseeka"
             android:layout_width="324dp"
             android:layout_height="28dp"
             android:layout_marginLeft="15dp"
@@ -72,38 +74,20 @@ android:layout_marginTop="-30dp"
             android:layout_height="20dp">
 
 
-            <TextView
-                android:id="@+id/brightnessValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text=" 10м" />
 
-            <TextView
-                android:id="@+id/brightnessValue2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:text=" 20м" />
-
-            <TextView
-                android:id="@+id/brightnessValue3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
-                android:text="30м" />
 
 
         </LinearLayout>
 
         <Spinner
-            android:id="@+id/mySpinner1"
+            android:visibility="visible"
+            android:id="@+id/Spinner1"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
         <Spinner
-            android:id="@+id/mySpinner2"
+            android:id="@+id/Spinner2"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

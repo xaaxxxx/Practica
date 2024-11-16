@@ -28,7 +28,7 @@ class AdressActivity : AppCompatActivity() {
         sohranbutton.setOnClickListener {
             val inputText = edit3page1.text.toString()
 
-            // Регулярное выражение для проверки формата адреса
+
             val regex = Regex("""^.*\s*,\s*ul\.\s*.*\s*,\s*d\.\s*\d+$""")
 
             if (regex.matches(inputText)) {
@@ -43,8 +43,7 @@ class AdressActivity : AppCompatActivity() {
 
                 startActivity(intent)
             } else {
-                // Адрес невалидный, покажите пользователю сообщение об ошибке
-                // Например, используйте Toast
+
                 Toast.makeText(
                     this,
                     "Неверный формат адреса. Введите адрес в формате:\nГород, ul. Улица, d. Номер дома",

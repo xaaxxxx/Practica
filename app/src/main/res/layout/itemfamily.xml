@@ -14,6 +14,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/pictureuser"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="40dp"
             android:layout_width="60dp"
@@ -29,7 +30,7 @@
 
         <TextView
             android:layout_marginTop="60dp"
-            android:id="@+id/n1n1"
+            android:id="@+id/nameuser"
             android:layout_marginLeft="90dp"
             android:layout_width="324dp"
             android:layout_height="138dp"

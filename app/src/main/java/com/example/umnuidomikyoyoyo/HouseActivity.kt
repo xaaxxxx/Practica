@@ -33,22 +33,22 @@ class HouseActivity : AppCompatActivity() {
 
         roomButton.setOnClickListener {
             Toast.makeText(this, "Переход к комнатам", Toast.LENGTH_SHORT).show()
-            // Здесь вы должны перейти к новой активности, которая отображает комнаты.
+
             val intent = Intent(this, HouseActivity::class.java)
             startActivity(intent)
-            // Используйте Intent для запуска новой активности.
+
         }
 
         deviceButton.setOnClickListener {
             Toast.makeText(this, "Переход к устройствам", Toast.LENGTH_SHORT).show()
-            // Здесь вы должны перейти к новой активности, которая отображает устройства.
+
             val intent = Intent(this, DeviceActivity::class.java)
             startActivity(intent)
         }
 
         userButton.setOnClickListener {
             Toast.makeText(this, "Переход к пользователям", Toast.LENGTH_SHORT).show()
-            // Здесь вы должны перейти к новой активности, которая отображает пользователей.
+
             val intent = Intent(this, FamilyActivity::class.java)
             startActivity(intent)
         }

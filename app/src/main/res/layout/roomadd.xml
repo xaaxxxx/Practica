@@ -56,7 +56,7 @@ android:textStyle="bold"
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="50dp"
-        android:id="@+id/recyclerViewProducts"
+        android:id="@+id/recyclerViewRoomAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

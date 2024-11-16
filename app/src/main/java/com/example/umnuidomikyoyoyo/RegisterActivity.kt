@@ -28,7 +28,7 @@ class RegisterActivity : AppCompatActivity() {
                 val intent = Intent(this, PincodeActivity::class.java)
                 startActivity(intent)
             } else {
-                // Отобразите сообщение об ошибке
+
                 Toast.makeText(this, "Неверные данные", Toast.LENGTH_SHORT).show()
             }
         }

@@ -22,18 +22,18 @@ class MainActivity :AppCompatActivity() {
             val password = passwordEditText.text.toString().trim()
 
             if (isValidEmail(email) && isValidPassword(password)) {
-                // Валидация пройдена, выполните вход
+
                 Toast.makeText(this, "Валидация успешна!", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, Pincodejoin::class.java)
                 startActivity(intent)
             } else {
-                // Отобразите сообщение об ошибке
+
                 Toast.makeText(this, "Неверный email или пароль", Toast.LENGTH_SHORT).show()
             }
         }
 
         registerButton.setOnClickListener {
-            // Переход на страницу регистрации
+
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
