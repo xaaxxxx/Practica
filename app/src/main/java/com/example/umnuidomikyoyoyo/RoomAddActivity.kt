@@ -4,6 +4,7 @@ import android.content.Intent
 import android.hardware.input.HostUsiVersion
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import java.time.chrono.HijrahChronology
 
@@ -11,7 +12,7 @@ class RoomAddActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.roomadd)
-        val leftbutton3 = findViewById<ImageButton>(R.id.leftbutton3)
+        val leftbutton3 = findViewById<ImageView>(R.id.leftbutton3)
 
 
 

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -15,7 +16,7 @@ class FamilyActivity : AppCompatActivity() {
         val deviceButton = findViewById<Button>(R.id.deviceButton)
         val userButton = findViewById<Button>(R.id.userButton)
         val addbutton2 = findViewById<ImageButton>(R.id.addbutton)
-        val famset = findViewById<ImageButton>(R.id.famset)
+        val famset = findViewById<ImageView>(R.id.famset)
 
         roomButton.setOnClickListener {
             Toast.makeText(this, "Переход к комнатам", Toast.LENGTH_SHORT).show()
@@ -47,7 +48,7 @@ class FamilyActivity : AppCompatActivity() {
 
         famset.setOnClickListener {
 
-            val intent = Intent(this, AdressActivity::class.java)
+            val intent = Intent(this, ProfileAddActivity::class.java)
             startActivity(intent)
         }
     }

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +17,7 @@ class HouseActivity : AppCompatActivity() {
         setContentView(R.layout.house)
 
 
-        val roomset = findViewById<ImageButton>(R.id.roomset)
+        val roomset = findViewById<ImageView>(R.id.roomset)
         val roomButton = findViewById<Button>(R.id.roomButton)
         val deviceButton = findViewById<Button>(R.id.deviceButton)
         val userButton = findViewById<Button>(R.id.userButton)
@@ -61,7 +62,7 @@ class HouseActivity : AppCompatActivity() {
 
         roomset.setOnClickListener {
             // Переход к AddActivity
-            val intent = Intent(this, AdressActivity::class.java)
+            val intent = Intent(this, ProfileAddActivity::class.java)
             startActivity(intent)
         }
     }

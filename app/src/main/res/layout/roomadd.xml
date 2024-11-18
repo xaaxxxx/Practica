@@ -11,14 +11,17 @@
         android:padding="16dp"
         android:gravity="center">
 
-        <ImageButton
+        <ImageView
+
             android:id="@+id/leftbutton3"
             android:layout_width="59dp"
             android:layout_height="58dp"
             android:background="@drawable/bluecircle"
+            android:paddingRight="1dp"
             android:src="@drawable/leftstrel" />
 
         <TextView
+            android:layout_marginLeft="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Добавить комнату"

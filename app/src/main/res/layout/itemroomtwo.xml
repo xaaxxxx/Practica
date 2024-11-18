@@ -26,6 +26,7 @@ android:id="@+id/pictureofroom"
         </ImageView>
 
         <TextView
+            android:textStyle="bold"
             android:id="@+id/nameroom2"
             android:layout_width="324dp"
             android:layout_height="138dp"

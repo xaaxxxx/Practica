@@ -26,6 +26,7 @@
         </ImageView>
 
         <TextView
+            android:textStyle="bold"
             android:id="@+id/n1n1"
             android:layout_width="324dp"
             android:layout_height="138dp"

@@ -3,6 +3,7 @@ package com.example.umnuidomikyoyoyo
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class DeviceAddActivity: AppCompatActivity() {
@@ -10,7 +11,7 @@ class DeviceAddActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.adddevice)
 
-        val leftbutton1 = findViewById<ImageButton>(R.id.leftbutton1)
+        val leftbutton1 = findViewById<ImageView>(R.id.leftbutton1)
 
 
 

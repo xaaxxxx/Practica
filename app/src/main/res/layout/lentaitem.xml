@@ -24,6 +24,7 @@
             </ImageView>
 
             <TextView
+
                 android:layout_width="324dp"
                 android:layout_height="28dp"
                 android:layout_marginLeft="10dp"

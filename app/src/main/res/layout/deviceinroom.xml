@@ -19,8 +19,9 @@
             android:layout_marginTop="0dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
-            
-            <ImageButton
+
+            <ImageView
+                android:clickable="true"
                 android:id="@+id/leftbutton3"
                 android:layout_width="66dp"
                 android:layout_height="60dp"

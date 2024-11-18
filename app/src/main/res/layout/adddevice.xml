@@ -21,7 +21,8 @@
             android:orientation="horizontal">
 
 
-            <ImageButton
+            <ImageView
+                android:clickable="true"
                 android:id="@+id/leftbutton1"
                 android:layout_width="59dp"
                 android:layout_height="58dp"

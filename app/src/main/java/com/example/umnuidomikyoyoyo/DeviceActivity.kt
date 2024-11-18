@@ -47,7 +47,7 @@ class DeviceActivity : AppCompatActivity() {
 
         deviceset.setOnClickListener {
             // Переход к AddActivity
-            val intent = Intent(this, AdressActivity::class.java)
+            val intent = Intent(this, ProfileAddActivity::class.java)
             startActivity(intent)
         }
     }
