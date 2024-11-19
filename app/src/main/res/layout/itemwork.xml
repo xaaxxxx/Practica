@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <ImageView
-
+android:id="@+id/devicepicture2"
             android:backgroundTint="@drawable/bluecirclebutton"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -27,7 +27,7 @@
 
         <TextView
             android:textStyle="bold"
-            android:id="@+id/n1n1"
+            android:id="@+id/devicetext2"
             android:layout_width="324dp"
             android:layout_height="138dp"
             android:layout_marginLeft="25dp"

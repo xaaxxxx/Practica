@@ -58,6 +58,7 @@ android:textStyle="bold"
         android:gravity="center" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
         android:id="@+id/recyclerViewRoomAdd"
         android:layout_width="match_parent"

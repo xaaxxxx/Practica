@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class HouseActivity : AppCompatActivity() {
 
@@ -15,6 +17,16 @@ class HouseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.house)
+
+
+        val datasetRooms = arrayOf("Гостиная", "Кухня", "Ванная")
+        val datasetRoomsType = arrayOf(1, 2, 3)
+        val roomAdapter = RoomAdapter(datasetRooms, datasetRoomsType)
+
+        val recyclerViewRooms: RecyclerView = findViewById(R.id.recyclerViewRoomsInHouse)
+        recyclerViewRooms.layoutManager = LinearLayoutManager(this)
+        recyclerViewRooms.adapter = roomAdapter
+
 
 
         val roomset = findViewById<ImageView>(R.id.roomset)

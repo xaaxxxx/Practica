@@ -4,8 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class DeviceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +18,21 @@ class DeviceActivity : AppCompatActivity() {
         val deviceButton = findViewById<Button>(R.id.deviceButton)
         val userButton = findViewById<Button>(R.id.userButton)
         val addbutton = findViewById<ImageButton>(R.id.addbutton)
-        val deviceset = findViewById<ImageButton>(R.id.deviceset)
+        val deviceset = findViewById<ImageView>(R.id.deviceset)
+
+
+        val datasetDevices = arrayOf("Лента", "Микроволновка", "Мультиварка")
+        val datasetopDevices = arrayOf("Скорость", "Яркость", "Теплота")
+        val datasetDeviceType = arrayOf(1, 2, 3)
+        val deviceAdapter = DeviceAdapter(datasetDevices, datasetopDevices, datasetDeviceType)
+
+        val recyclerViewDevices: RecyclerView = findViewById(R.id.recyclerViewDevices)
+        recyclerViewDevices.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+        recyclerViewDevices.adapter = deviceAdapter
+
+
+
+
 
         roomButton.setOnClickListener {
             Toast.makeText(this, "Переход к комнатам", Toast.LENGTH_SHORT).show()

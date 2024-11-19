@@ -7,6 +7,8 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class FamilyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +19,18 @@ class FamilyActivity : AppCompatActivity() {
         val userButton = findViewById<Button>(R.id.userButton)
         val addbutton2 = findViewById<ImageButton>(R.id.addbutton)
         val famset = findViewById<ImageView>(R.id.famset)
+
+
+
+
+        val datasetUsers = arrayOf("Браток", "Батек", "Дедок")
+        val datasetUserType = arrayOf(1, 2, 3)
+        val roomAdapter = FamilyAdapter(datasetUsers, datasetUserType)
+
+        val recyclerViewRooms: RecyclerView = findViewById(R.id.recyclerViewFamily)
+        recyclerViewRooms.layoutManager = LinearLayoutManager(this)
+        recyclerViewRooms.adapter = roomAdapter
+
 
         roomButton.setOnClickListener {
             Toast.makeText(this, "Переход к комнатам", Toast.LENGTH_SHORT).show()
