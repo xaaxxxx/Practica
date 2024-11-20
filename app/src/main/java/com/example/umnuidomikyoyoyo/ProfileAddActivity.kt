@@ -16,7 +16,7 @@ class ProfileAddActivity : AppCompatActivity() {
 
         leftbutton2.setOnClickListener {
             // Переход на страницу регистрации
-            val intent = Intent(this, FamilyActivity::class.java)
+            val intent = Intent(this, MainPage::class.java)
             startActivity(intent)
         }
     }

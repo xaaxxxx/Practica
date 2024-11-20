@@ -15,19 +15,19 @@ class DeviceAddActivity: AppCompatActivity() {
 
         val leftbutton1 = findViewById<ImageView>(R.id.leftbutton1)
 
-        val datasetRooms = arrayOf("Лента", "Микроволновка", "Мультиварка")
-        val datasetRoomsType = arrayOf(1, 2, 3)
-        val roomAdapter = RoomAdapter(datasetRooms, datasetRoomsType)
+        val datasetDeviceAdd = arrayOf("Лента", "Микроволновка", "Мультиварка")
+        val datasetDeviceAddType = arrayOf(1, 2, 3)
+        val deviceAddAdapter = DeviceAddAdapter(datasetDeviceAdd, datasetDeviceAddType)
 
         val recyclerViewRooms: RecyclerView = findViewById(R.id.recyclerViewDeviceAdd)
         recyclerViewRooms.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
-        recyclerViewRooms.adapter = roomAdapter
+        recyclerViewRooms.adapter = deviceAddAdapter
 
 
 
         leftbutton1.setOnClickListener {
             // Переход на страницу регистрации
-            val intent = Intent(this, DeviceActivity::class.java)
+            val intent = Intent(this, MainPage::class.java)
             startActivity(intent)
         }
     }

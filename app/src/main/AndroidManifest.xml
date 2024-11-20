@@ -34,6 +34,8 @@
         <activity android:name=".Pincodejoin" ></activity>
         <activity android:name=".RegisterActivity"></activity>
         <activity android:name=".PincodeActivity"></activity>
+        <activity android:name=".MainPage"></activity>
+        <activity android:name=".DeviceDetailActivity"></activity>
 
 
 

@@ -37,7 +37,7 @@ class AdressActivity : AppCompatActivity() {
 
 
                 val address = edit3page1.text.toString()
-                val intent = Intent(this, HouseActivity::class.java)
+                val intent = Intent(this, MainPage::class.java)
                 intent.putExtra("address", address)
                 startActivity(intent)
 

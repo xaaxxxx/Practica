@@ -17,19 +17,19 @@ class RoomAddActivity : AppCompatActivity() {
         val leftbutton3 = findViewById<ImageView>(R.id.leftbutton3)
 
 
-        val datasetRooms = arrayOf("Гостиная", "Кухня", "Ванная")
-        val datasetRoomsType = arrayOf(1, 2, 3)
-        val roomAdapter = RoomAdapter(datasetRooms, datasetRoomsType)
+        val datasetRoomsAdd = arrayOf("Гостиная", "Кухня", "Ванная")
+        val datasetRoomsAddType = arrayOf(1, 2, 3)
+        val roomAddAdapter = RoomAddAdapter(datasetRoomsAdd, datasetRoomsAddType)
 
-        val recyclerViewRooms: RecyclerView = findViewById(R.id.recyclerViewRoomAdd)
-        recyclerViewRooms.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
-        recyclerViewRooms.adapter = roomAdapter
+        val recyclerViewRoomsAdd: RecyclerView = findViewById(R.id.recyclerViewRoomAdd)
+        recyclerViewRoomsAdd.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+        recyclerViewRoomsAdd.adapter = roomAddAdapter
 
 
 
         leftbutton3.setOnClickListener {
             // Переход на страницу регистрации
-            val intent = Intent(this, HouseActivity::class.java)
+            val intent = Intent(this, MainPage::class.java)
             startActivity(intent)
         }
     }

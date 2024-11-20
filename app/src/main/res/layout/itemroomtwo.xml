@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="131dp"
+    android:layout_height="136dp"
     android:orientation="horizontal">
 
 
@@ -14,22 +14,21 @@
         android:orientation="vertical">
 
         <ImageView
-android:id="@+id/pictureofroom2"
-            android:backgroundTint="@drawable/bluecirclebutton"
+            android:id="@+id/pictureroom22"
+
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/sofa">
-
-
         </ImageView>
 
         <TextView
+
             android:textStyle="bold"
             android:id="@+id/nameroom2"
-            android:layout_width="324dp"
-            android:layout_height="138dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
            android:layout_marginLeft="15dp"
           android:layout_marginTop="15dp"
             android:layout_marginBottom="30dp"

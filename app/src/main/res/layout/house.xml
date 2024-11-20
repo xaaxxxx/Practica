@@ -5,91 +5,15 @@
     android:orientation="vertical"
     android:background="#f0f0f0">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#000000"
-        android:padding="16dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Комнаты"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="8dp">
-
-            <TextView
-                android:id="@+id/texthouse"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="г. Омск, ул. Ленина, д. 24"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
-
-            <ImageView
-                android:clickable="true"
-                android:id="@+id/roomset"
-                android:layout_width="85dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/whaleset" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#000000"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <Button
-            android:id="@+id/roomButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Комнаты"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:background="?android:attr/selectableItemBackground" />
-
-        <Button
-            android:id="@+id/deviceButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Устройства"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:background="?android:attr/selectableItemBackground" />
-
-        <Button
-            android:id="@+id/userButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Пользователи"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:background="?android:attr/selectableItemBackground" />
-
-    </LinearLayout>
 
 
+    <ImageButton
 
+        android:id="@+id/addbutton"
+        android:layout_marginLeft="330dp"
+        android:layout_width="76dp"
+        android:layout_height="61dp"
+        android:background="@drawable/buttonadd"></ImageButton>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
@@ -99,12 +23,6 @@
         android:orientation="vertical"/>
 
 
-    <ImageButton
-        android:layout_marginTop="250dp"
-        android:id="@+id/addbutton"
-        android:layout_marginLeft="330dp"
-        android:layout_width="76dp"
-        android:layout_height="61dp"
-        android:background="@drawable/buttonadd"></ImageButton>
+
 
 </LinearLayout>

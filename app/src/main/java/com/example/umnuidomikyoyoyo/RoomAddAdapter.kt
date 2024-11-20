@@ -17,7 +17,7 @@ class RoomAddAdapter (private val data: Array<String>, private val typeData:Arra
 
         init {
             TitleText = itemView?.findViewById<TextView>(R.id.nameroom2)
-            Image = itemView?.findViewById(R.id.pictureofroom2);
+            Image = itemView?.findViewById(R.id.pictureroom22);
             itemView.setOnClickListener(this)
         }
 

@@ -17,7 +17,7 @@ class DeviceAddAdapter (private val data: Array<String>, private val typeData:Ar
 
         init {
             TitleText = itemView?.findViewById<TextView>(R.id.devicetext2)
-            Image = itemView?.findViewById(R.id.devicepicture2);
+            Image = itemView?.findViewById(R.id.devicepicture22);
             itemView.setOnClickListener(this)
         }
 
@@ -32,7 +32,7 @@ class DeviceAddAdapter (private val data: Array<String>, private val typeData:Ar
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.adddevice, parent, false)
+            .inflate(R.layout.itemwork, parent, false)
 
         return ViewHolder(view)
     }
