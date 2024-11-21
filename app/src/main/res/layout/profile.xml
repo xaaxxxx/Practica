@@ -44,6 +44,8 @@
         </LinearLayout>
 
         <ImageView
+
+            android:id="@+id/faceprofile"
             android:layout_width="166dp"
             android:layout_height="160dp"
             android:layout_marginLeft="110dp"

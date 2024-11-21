@@ -26,9 +26,9 @@ class DeviceActivity : Fragment() {
         recyclerViewDevices.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         val devices = arrayOf(
-            DeviceData(1, "Лента", "Скорость", R.drawable.ic_launcher_foreground), // Используйте ваши drawable
-            DeviceData(2, "Микроволновка", "Мощность", R.drawable.ic_launcher_foreground),
-            DeviceData(3, "Мультиварка", "Температура", R.drawable.ic_launcher_foreground)
+            DeviceData(1, "Лента", "Скорость", R.drawable.laptop), // Используйте ваши drawable
+            DeviceData(2, "Микроволновка", "Мощность", R.drawable.fridge),
+            DeviceData(3, "Мультиварка", "Температура", R.drawable.sofa)
         )
 
         val adapter = DeviceAdapter(devices, requireContext())

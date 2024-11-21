@@ -44,12 +44,12 @@ class DeviceAddAdapter (private val data: Array<String>, private val typeData:Ar
         holder.TitleText?.setText(TitleText)
 
         when (Type) {
-            1 -> holder.Image?.setImageDrawable(R.drawable.shower.toDrawable())
-            2 -> holder.Image?.setImageDrawable(R.drawable.shower.toDrawable())
-            3 -> holder.Image?.setImageDrawable(R.drawable.sofa.toDrawable())
-            4 -> holder.Image?.setImageDrawable(R.drawable.sofa.toDrawable())
-            5 -> holder.Image?.setImageDrawable(R.drawable.television.toDrawable())
-            6 -> holder.Image?.setImageDrawable(R.drawable.television.toDrawable())
+            1 -> holder.Image?.setImageResource(R.drawable.shower)
+            2 -> holder.Image?.setImageResource(R.drawable.shower)
+            3 -> holder.Image?.setImageResource(R.drawable.sofa)
+            4 -> holder.Image?.setImageResource(R.drawable.sofa)
+            5 -> holder.Image?.setImageResource(R.drawable.television)
+            6 -> holder.Image?.setImageResource(R.drawable.television)
             else -> {
                 Log.e("ERROR", "Room image type is missing!")
             }

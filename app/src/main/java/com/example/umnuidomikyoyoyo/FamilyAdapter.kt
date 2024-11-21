@@ -44,12 +44,12 @@ class FamilyAdapter (private val data: Array<String>, private val typeData:Array
         holder.TitleText?.setText(TitleText)
 
         when (Type) {
-            1 -> holder.Image?.setImageDrawable(R.drawable.cowboy.toDrawable())
-            2 -> holder.Image?.setImageDrawable(R.drawable.cowboy.toDrawable())
-            3 -> holder.Image?.setImageDrawable(R.drawable.cowboy.toDrawable())
-            4 -> holder.Image?.setImageDrawable(R.drawable.cowboy.toDrawable())
-            5 -> holder.Image?.setImageDrawable(R.drawable.cowboy.toDrawable())
-            6 -> holder.Image?.setImageDrawable(R.drawable.cowboy.toDrawable())
+            1 -> holder.Image?.setImageResource(R.drawable.cowboy)
+            2 -> holder.Image?.setImageResource(R.drawable.cowboy)
+            3 -> holder.Image?.setImageResource(R.drawable.cowboy)
+            4 -> holder.Image?.setImageResource(R.drawable.cowboy)
+            5 -> holder.Image?.setImageResource(R.drawable.cowboy)
+            6 -> holder.Image?.setImageResource(R.drawable.cowboy)
             else -> {
                 Log.e("ERROR", "Room image type is missing!")
             }

@@ -6,64 +6,64 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.graphics.drawable.toDrawable
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class RoomAddAdapter (private val data: Array<String>, private val typeData:Array<Int>) : RecyclerView.Adapter<RoomAddAdapter.ViewHolder>() {
+class RoomAddAdapter(private var data: Array<String>, private val typeData: IntArray) :
+    RecyclerView.Adapter<RoomAddAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-        var TitleText: TextView?
-        var Image: ImageView?
-
-        init {
-            TitleText = itemView?.findViewById<TextView>(R.id.nameroom2)
-            Image = itemView?.findViewById(R.id.pictureroom22);
-            itemView.setOnClickListener(this)
-        }
-
-        var mClickListener: ItemClickListener? = null
-        public fun setOnClickListener(clickListener: ItemClickListener)
-        {
-            mClickListener = clickListener
-        }
-        override fun onClick(p0: View?) {
-            mClickListener?.onItemClick(p0, adapterPosition)
-        }
+    interface ItemClickListener {
+        fun onItemClick(view: View?, position: Int)
     }
+
+    private var itemClickListener: ItemClickListener? = null
+
+    fun setOnItemClickListener(listener: ItemClickListener) {
+        itemClickListener = listener
+    }
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val nameTextView: TextView = itemView.findViewById(R.id.nameroom2)
+        val imageView: ImageView = itemView.findViewById(R.id.pictureroom22)
+    }
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.itemroomtwo, parent, false)
-
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val TitleText: String = data!![position]
-        val Type: Int = typeData!![position]
+        val roomName = data[position]
+        val roomType = typeData[position]
 
-        holder.TitleText?.setText(TitleText)
+        holder.nameTextView.text = roomName
 
-        when (Type) {
-            1 -> holder.Image?.setImageDrawable(R.drawable.shower.toDrawable())
-            2 -> holder.Image?.setImageDrawable(R.drawable.shower.toDrawable())
-            3 -> holder.Image?.setImageDrawable(R.drawable.sofa.toDrawable())
-            4 -> holder.Image?.setImageDrawable(R.drawable.sofa.toDrawable())
-            5 -> holder.Image?.setImageDrawable(R.drawable.television.toDrawable())
-            6 -> holder.Image?.setImageDrawable(R.drawable.television.toDrawable())
+        val drawable: Int = when (roomType) {
+            1 -> R.drawable.shower // Замените на ваши drawable-ресурсы
+            2 -> R.drawable.shower
+            3 -> R.drawable.sofa
+            4 -> R.drawable.sofa
+            5 -> R.drawable.television
+            6 -> R.drawable.television
             else -> {
                 Log.e("ERROR", "Room image type is missing!")
+                R.drawable.ic_launcher_foreground //  Или другое изображение по умолчанию
             }
         }
-    }
-    override fun getItemCount(): Int {
-        return data!!.size
+        holder.imageView.setImageDrawable(ContextCompat.getDrawable(holder.itemView.context, drawable))
+
+
+        holder.itemView.setOnClickListener {
+            itemClickListener?.onItemClick(it, position)
+        }
     }
 
-    fun getItem(id: Int): String? {
-        return data!![id]
-    }
+    override fun getItemCount(): Int = data.size
 
-    interface ItemClickListener {
-        fun onItemClick(view: View?, position: Int)
+    fun filterList(filteredList: Array<String>) {
+        data = filteredList
+        notifyDataSetChanged()
     }
 }

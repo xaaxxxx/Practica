@@ -33,6 +33,7 @@
 
 
     <EditText
+        android:id="@+id/poisk"
         android:textStyle="bold"
         android:textSize="15dp"
         android:layout_width="350dp"
