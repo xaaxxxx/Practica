@@ -2,6 +2,8 @@ package com.example.umnuidomikyoyoyo
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -14,82 +16,77 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-class RegisterActivity : AppCompatActivity() {
+class RegisterActivity  : AppCompatActivity() {
+
+    private lateinit var usernameEditText: EditText
+    private lateinit var emailEditText: EditText
+    private lateinit var passwordEditText: EditText
+    private lateinit var loginButton: Button
+    private lateinit var registerButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.register) // Замените на ваш файл разметки
-        val usernameEditText = findViewById<EditText>(R.id.edit2page1)
-        val emailEditText = findViewById<EditText>(R.id.edit2page2)
-        val passwordEditText = findViewById<EditText>(R.id.edit2page3)
-        val registerButton = findViewById<Button>(R.id.buttonregister2)
-        val loginButton = findViewById<Button>(R.id.buttonvoiti2)
+        setContentView(R.layout.register)
+
+        usernameEditText = findViewById(R.id.edit2page1)
+        emailEditText = findViewById(R.id.edit2page2)
+        passwordEditText = findViewById(R.id.edit2page3)
+        loginButton = findViewById(R.id.buttonvoiti2)
+        registerButton = findViewById(R.id.buttonregister2)
 
         registerButton.setOnClickListener {
-            val username = usernameEditText.text.toString().trim()
-            var email = emailEditText.text.toString().trim()
-            var password = passwordEditText.text.toString().trim()
+            val usernameview = usernameEditText.text.toString()
+            var emailview = emailEditText.text.toString()
+            var passwordview = passwordEditText.text.toString()
 
-            if (isValidUsername(username) && isValidEmail(email) && isValidPassword(password)) {
+            // Проверка полей на пустоту
+            if (emailview.isEmpty() || passwordview.isEmpty() || usernameview.isEmpty()) {
+                Toast.makeText(this, "Пожалуйста, заполните все поля", Toast.LENGTH_SHORT).show()
 
+            }
 
+            // Проверка почты на корректность
+            else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(emailview).matches()) {
+                Toast.makeText(this, "Некорректный адрес электронной почты", Toast.LENGTH_SHORT)
+                    .show()
 
+            } else if (passwordview.length < 8) {
+                Toast.makeText(this, "Пароль должен быть не менее 8 символов", Toast.LENGTH_SHORT)
+                    .show()
+
+            } else {
+
+                Toast.makeText(this, "Проверка прошла успешно", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, PincodeActivity::class.java)
+                startActivity(intent)
 
                 val job = Job()
                 val scope = CoroutineScope(Dispatchers.Main + job)
-
-                if (job.isActive)
-                {
+                if (job.isActive) {
                     lifecycleScope.launch {
                         var supabase = scauth.getSB()
                         val user = supabase.auth.signUpWith(Email) {
                             email = emailEditText?.text.toString()
                             password = passwordEditText?.text.toString()
                         }
-
-                        /*
-                        sc.getSB().auth.signUpWith(Email) {
-                            email = "test@example.com"
-                            password = "123456"
-                        }*/
-
-                    } //.isCompleted
+                    }
                 }
 
-                if (!job.isActive)
+                if (!job.isActive) {
                     job.cancel()
+                }
 
 
+            }
 
+            loginButton.setOnClickListener {
+                // Создание Intent для запуска нового Activity
+                val intent = Intent(this, MainActivity::class.java)
 
-
-                // Валидация пройдена, выполните регистрацию
-                Toast.makeText(this, "Регистрация успешна!", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, PincodeActivity::class.java)
+                // Запуск нового Activity
                 startActivity(intent)
-            } else {
 
-                Toast.makeText(this, "Неверные данные", Toast.LENGTH_SHORT).show()
             }
         }
-
-        loginButton.setOnClickListener {
-            // Переход на главную страницу
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun isValidUsername(username: String): Boolean {
-        // Валидация имени пользователя. Например, минимальная длина 3 символа
-        return username.length >= 3
-    }
-
-    private fun isValidEmail(email: String): Boolean {
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
-    }
-
-    private fun isValidPassword(password: String): Boolean {
-        // Валидация пароля. Например, минимальная длина 6 символов
-        return password.length >= 6
     }
 }

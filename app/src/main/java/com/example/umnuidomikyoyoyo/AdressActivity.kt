@@ -20,20 +20,15 @@ class AdressActivity : AppCompatActivity() {
         setContentView(R.layout.adress)
 edit3page1 = findViewById(R.id.edit3page1)
 
-val supa = createSupabaseClient(
+        val supa = createSupabaseClient(
             supabaseUrl = "https://brxlipgzawgsmzeqfrwx.supabase.co",
             supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJyeGxpcGd6YXdnc216ZXFmcnd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE0ODI4NjgsImV4cCI6MjA0NzA1ODg2OH0.a9kYJUJjuo67XQH53VM4kYcnl7l4NUXc9GeNxDWdGxg"
         ) {
             install(Postgrest)
         }
 
-
-
         val edit3page1: EditText = findViewById(R.id.edit3page1)
         val sohranbutton: Button = findViewById(R.id.sohranbutton)
-
-
-
 
         sohranbutton.setOnClickListener {
             val inputText = edit3page1.text.toString()

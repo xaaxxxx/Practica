@@ -14,56 +14,61 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-class MainActivity :AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
+    private lateinit var emailEditText: EditText
+    private lateinit var passwordEditText: EditText
+    private lateinit var loginButton: Button
+    private lateinit var registerButton: Button
 
-
-    var emailEditText = findViewById<EditText>(R.id.edit1page1)
-    var passwordEditText = findViewById<EditText>(R.id.edit1page2)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        val loginButton = findViewById<Button>(R.id.buttonvoiti)
-        val registerButton = findViewById<Button>(R.id.buttonregister1)
-        var email = emailEditText.text.toString().trim()
-        var password = passwordEditText.text.toString().trim()
+        emailEditText = findViewById(R.id.edit1page1)
+        passwordEditText = findViewById(R.id.edit1page2)
+        loginButton = findViewById(R.id.buttonvoiti)
+        registerButton = findViewById(R.id.buttonregister1)
 
         loginButton.setOnClickListener {
+            val emailview = emailEditText.text.toString()
+            val passwordview = passwordEditText.text.toString()
 
-            if (isValidEmail(email) && isValidPassword(password)) {
+            if (emailview.isEmpty() || passwordview.isEmpty()) {
+                Toast.makeText(this, "Есть пустые поля", Toast.LENGTH_SHORT).show()
+
+            }
+
+            // Проверка почты на корректность
+            else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(emailview).matches()) {
+                Toast.makeText(this, "Некорректный адрес электронной почты", Toast.LENGTH_SHORT)
+                    .show()
+
+            }
+
+            else {
+
+                Toast.makeText(this, "Проверка прошла успешно", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Pincodejoin::class.java)
+                startActivity(intent)
 
                 val job = Job()
                 val scope = CoroutineScope(Dispatchers.Main + job)
-
-                if (job.isActive)
-                {
+                if (job.isActive) {
                     lifecycleScope.launch {
                         var supabase = scauth.getSB()
                         val user = supabase.auth.signInWith(Email) {
                             email = emailEditText?.text.toString()
                             password = passwordEditText?.text.toString()
                         }
-
-                        /*
-                        sc.getSB().auth.signUpWith(Email) {
-                            email = "test@example.com"
-                            password = "123456"
-                        }*/
-
-                    } //.isCompleted
+                    }
                 }
 
-                if (!job.isActive)
+                if (!job.isActive) {
                     job.cancel()
+                }
 
-                Toast.makeText(this, "Валидация успешна!", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, Pincodejoin::class.java)
-                startActivity(intent)
-            } else {
-
-                Toast.makeText(this, "Неверный email или пароль", Toast.LENGTH_SHORT).show()
             }
+
         }
 
         registerButton.setOnClickListener {
@@ -71,14 +76,5 @@ class MainActivity :AppCompatActivity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
-    }
-
-    private fun isValidEmail(email: String): Boolean {
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
-    }
-
-    private fun isValidPassword(password: String): Boolean {
-        // Валидация пароля. Например, минимальная длина 6 символов
-        return password.length >= 6
     }
 }
