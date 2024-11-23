@@ -6,6 +6,8 @@ import io.github.jan.supabase.auth.Auth
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.postgrest.Postgrest
 
+import io.github.jan.supabase.storage.Storage
+
 object scauth : Application() {
     val supabase = createSupabaseClient(
         supabaseUrl = "https://brxlipgzawgsmzeqfrwx.supabase.co",
@@ -13,6 +15,8 @@ object scauth : Application() {
     ) {
         install(Auth)
         install(Postgrest)
+
+        install(Storage)
     }
     public fun getSB() : SupabaseClient {
         return supabase

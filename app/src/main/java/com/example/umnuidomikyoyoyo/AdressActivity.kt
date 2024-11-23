@@ -37,7 +37,7 @@ edit3page1 = findViewById(R.id.edit3page1)
                 val response = SmartDataClass(id=4, Name="valeralox", Address=edit3page1.text.toString())
                 supa.from("Homes").insert(response)
             }
-            val regex = Regex("""^.*\s*,\s*ul\.\s*.*\s*,\s*d\.\s*\d+$""")
+            val regex = Regex("""^.*\s*,\s*ул\.\s*.*\s*,\s*д\.\s*\d+$""")
 
             if (regex.matches(inputText)) {
                 // Адрес валидный
@@ -54,7 +54,7 @@ edit3page1 = findViewById(R.id.edit3page1)
 
                 Toast.makeText(
                     this,
-                    "Неверный формат адреса. Введите адрес в формате:\nГород, ul. Улица, d. Номер дома",
+                    "Неверный формат адреса. Введите адрес в формате:\nГород, ул. Улица, д. Номер дома",
                     Toast.LENGTH_LONG
                 ).show()
             }
